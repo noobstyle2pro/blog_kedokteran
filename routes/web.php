@@ -25,9 +25,9 @@ Route::post('/users/{user}', 'UserController@store');
 Route::put('/users/{user}', 'UserController@update');
 Route::delete('/users/{user}', 'UserController@destroy');
 
-Route::get('/questions', 'QuestionController@index');
+Route::get('/questions', 'QuestionController@create');
 Route::get('/questions/{question}', 'QuestionController@show');
-Route::post('/questions/{question}', 'QuestionController@store');
+Route::post('/questions', 'QuestionController@store');
 Route::put('/questions/{question}', 'QuestionController@update');
 Route::delete('/questions/{question}', 'QuestionController@destroy');
 

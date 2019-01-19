@@ -1,0 +1,2500 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/all.js"></script>
+
+
+          <script>
+        $(function() {
+            setupLanguages(["bash","javascript"]);
+        });
+      </script>
+      </head>
+
+  <body class="">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+        <img src="images/logo.png" />
+                    <div class="lang-selector">
+                                  <a href="#" data-language-name="bash">bash</a>
+                                  <a href="#" data-language-name="javascript">javascript</a>
+                            </div>
+                            <div class="search">
+              <input type="text" class="search" id="input-search" placeholder="Search">
+            </div>
+            <ul class="search-results"></ul>
+              <div id="toc">
+      </div>
+                    <ul class="toc-footer">
+                                  <li><a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a></li>
+                            </ul>
+            </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+          <!-- START_INFO -->
+<h1>Info</h1>
+<p>Welcome to the generated API reference.
+<a href="http://localhost/docs/collection.json">Get Postman Collection</a></p>
+<!-- END_INFO -->
+<h1>general</h1>
+<!-- START_de9212b4bd813e07f73b53cc3bd13088 -->
+<h2>Get All Questions with Answers</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/questions" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/questions");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "total_score": 4,
+    "label": "Anda memiliki mata yang sehat"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/questions</code></p>
+<!-- END_de9212b4bd813e07f73b53cc3bd13088 -->
+<!-- START_f605dcf2ca92a58323db87f649ac1dae -->
+<h2>api/questions/{question}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/questions/{question}" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/questions/{question}");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (404):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "No query results for model [App\\Question].",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+    "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Exceptions\/Handler.php",
+    "line": 200,
+    "trace": [
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Exceptions\/Handler.php",
+            "line": 176,
+            "function": "prepareException",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/app\/Exceptions\/Handler.php",
+            "line": 49,
+            "function": "render",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/nunomaduro\/collision\/src\/Adapters\/Laravel\/ExceptionHandler.php",
+            "line": 68,
+            "function": "render",
+            "class": "App\\Exceptions\\Handler",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 83,
+            "function": "render",
+            "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 55,
+            "function": "handleException",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Middleware\/ThrottleRequests.php",
+            "line": 58,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php",
+            "line": 684,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php",
+            "line": 659,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php",
+            "line": 625,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php",
+            "line": 614,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php",
+            "line": 176,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 30,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/fideloper\/proxy\/src\/TrustProxies.php",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Fideloper\\Proxy\\TrustProxies",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php",
+            "line": 31,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php",
+            "line": 31,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/CheckForMaintenanceMode.php",
+            "line": 62,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php",
+            "line": 151,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php",
+            "line": 116,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Tools\/ResponseStrategies\/ResponseCallStrategy.php",
+            "line": 272,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Tools\/ResponseStrategies\/ResponseCallStrategy.php",
+            "line": 256,
+            "function": "callLaravelRoute",
+            "class": "Mpociot\\ApiDoc\\Tools\\ResponseStrategies\\ResponseCallStrategy",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Tools\/ResponseStrategies\/ResponseCallStrategy.php",
+            "line": 33,
+            "function": "makeApiCall",
+            "class": "Mpociot\\ApiDoc\\Tools\\ResponseStrategies\\ResponseCallStrategy",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Tools\/ResponseResolver.php",
+            "line": 49,
+            "function": "__invoke",
+            "class": "Mpociot\\ApiDoc\\Tools\\ResponseStrategies\\ResponseCallStrategy",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Tools\/ResponseResolver.php",
+            "line": 68,
+            "function": "resolve",
+            "class": "Mpociot\\ApiDoc\\Tools\\ResponseResolver",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Tools\/Generator.php",
+            "line": 54,
+            "function": "getResponse",
+            "class": "Mpociot\\ApiDoc\\Tools\\ResponseResolver",
+            "type": "::"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Commands\/GenerateDocumentation.php",
+            "line": 196,
+            "function": "processRoute",
+            "class": "Mpociot\\ApiDoc\\Tools\\Generator",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Commands\/GenerateDocumentation.php",
+            "line": 57,
+            "function": "processRoutes",
+            "class": "Mpociot\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "-&gt;"
+        },
+        {
+            "function": "handle",
+            "class": "Mpociot\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php",
+            "line": 29,
+            "function": "call_user_func_array"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php",
+            "line": 87,
+            "function": "Illuminate\\Container\\{closure}",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php",
+            "line": 31,
+            "function": "callBoundMethod",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Container.php",
+            "line": 572,
+            "function": "call",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php",
+            "line": 183,
+            "function": "call",
+            "class": "Illuminate\\Container\\Container",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/symfony\/console\/Command\/Command.php",
+            "line": 255,
+            "function": "execute",
+            "class": "Illuminate\\Console\\Command",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php",
+            "line": 170,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Command\\Command",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/symfony\/console\/Application.php",
+            "line": 901,
+            "function": "run",
+            "class": "Illuminate\\Console\\Command",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/symfony\/console\/Application.php",
+            "line": 262,
+            "function": "doRunCommand",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/symfony\/console\/Application.php",
+            "line": 145,
+            "function": "doRun",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Application.php",
+            "line": 89,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Console\/Kernel.php",
+            "line": 122,
+            "function": "run",
+            "class": "Illuminate\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/artisan",
+            "line": 37,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Console\\Kernel",
+            "type": "-&gt;"
+        }
+    ]
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/questions/{question}</code></p>
+<!-- END_f605dcf2ca92a58323db87f649ac1dae -->
+<!-- START_ffba39ee142f0e0f3df7d5ab3a06906b -->
+<h2>Get All Answers</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/answers" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/answers");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "total_score": 4,
+    "label": "Anda memiliki mata yang sehat"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/answers</code></p>
+<!-- END_ffba39ee142f0e0f3df7d5ab3a06906b -->
+<!-- START_2b390d72350a482fc19b0e8670afe9c4 -->
+<h2>api/answers/{answer}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/answers/{answer}" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/api/answers/{answer}");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (404):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "No query results for model [App\\Answer].",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+    "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Exceptions\/Handler.php",
+    "line": 200,
+    "trace": [
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Exceptions\/Handler.php",
+            "line": 176,
+            "function": "prepareException",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/app\/Exceptions\/Handler.php",
+            "line": 49,
+            "function": "render",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/nunomaduro\/collision\/src\/Adapters\/Laravel\/ExceptionHandler.php",
+            "line": 68,
+            "function": "render",
+            "class": "App\\Exceptions\\Handler",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 83,
+            "function": "render",
+            "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 55,
+            "function": "handleException",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Middleware\/ThrottleRequests.php",
+            "line": 58,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php",
+            "line": 684,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php",
+            "line": 659,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php",
+            "line": 625,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php",
+            "line": 614,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php",
+            "line": 176,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 30,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/fideloper\/proxy\/src\/TrustProxies.php",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Fideloper\\Proxy\\TrustProxies",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php",
+            "line": 31,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php",
+            "line": 31,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/CheckForMaintenanceMode.php",
+            "line": 62,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php",
+            "line": 151,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php",
+            "line": 116,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Tools\/ResponseStrategies\/ResponseCallStrategy.php",
+            "line": 272,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Tools\/ResponseStrategies\/ResponseCallStrategy.php",
+            "line": 256,
+            "function": "callLaravelRoute",
+            "class": "Mpociot\\ApiDoc\\Tools\\ResponseStrategies\\ResponseCallStrategy",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Tools\/ResponseStrategies\/ResponseCallStrategy.php",
+            "line": 33,
+            "function": "makeApiCall",
+            "class": "Mpociot\\ApiDoc\\Tools\\ResponseStrategies\\ResponseCallStrategy",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Tools\/ResponseResolver.php",
+            "line": 49,
+            "function": "__invoke",
+            "class": "Mpociot\\ApiDoc\\Tools\\ResponseStrategies\\ResponseCallStrategy",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Tools\/ResponseResolver.php",
+            "line": 68,
+            "function": "resolve",
+            "class": "Mpociot\\ApiDoc\\Tools\\ResponseResolver",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Tools\/Generator.php",
+            "line": 54,
+            "function": "getResponse",
+            "class": "Mpociot\\ApiDoc\\Tools\\ResponseResolver",
+            "type": "::"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Commands\/GenerateDocumentation.php",
+            "line": 196,
+            "function": "processRoute",
+            "class": "Mpociot\\ApiDoc\\Tools\\Generator",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Commands\/GenerateDocumentation.php",
+            "line": 57,
+            "function": "processRoutes",
+            "class": "Mpociot\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "-&gt;"
+        },
+        {
+            "function": "handle",
+            "class": "Mpociot\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php",
+            "line": 29,
+            "function": "call_user_func_array"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php",
+            "line": 87,
+            "function": "Illuminate\\Container\\{closure}",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php",
+            "line": 31,
+            "function": "callBoundMethod",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Container.php",
+            "line": 572,
+            "function": "call",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php",
+            "line": 183,
+            "function": "call",
+            "class": "Illuminate\\Container\\Container",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/symfony\/console\/Command\/Command.php",
+            "line": 255,
+            "function": "execute",
+            "class": "Illuminate\\Console\\Command",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php",
+            "line": 170,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Command\\Command",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/symfony\/console\/Application.php",
+            "line": 901,
+            "function": "run",
+            "class": "Illuminate\\Console\\Command",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/symfony\/console\/Application.php",
+            "line": 262,
+            "function": "doRunCommand",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/symfony\/console\/Application.php",
+            "line": 145,
+            "function": "doRun",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Application.php",
+            "line": 89,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Console\/Kernel.php",
+            "line": 122,
+            "function": "run",
+            "class": "Illuminate\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/artisan",
+            "line": 37,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Console\\Kernel",
+            "type": "-&gt;"
+        }
+    ]
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/answers/{answer}</code></p>
+<!-- END_2b390d72350a482fc19b0e8670afe9c4 -->
+<!-- START_66e08d3cc8222573018fed49e121e96d -->
+<h2>login</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/login" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/login");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">null</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET login</code></p>
+<!-- END_66e08d3cc8222573018fed49e121e96d -->
+<!-- START_ba35aa39474cb98cfb31829e70eb8b74 -->
+<h2>login</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/login" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/login");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST login</code></p>
+<!-- END_ba35aa39474cb98cfb31829e70eb8b74 -->
+<!-- START_e65925f23b9bc6b93d9356895f29f80c -->
+<h2>logout</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/logout" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/logout");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST logout</code></p>
+<!-- END_e65925f23b9bc6b93d9356895f29f80c -->
+<!-- START_ff38dfb1bd1bb7e1aa24b4e1792a9768 -->
+<h2>register</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/register" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/register");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">null</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET register</code></p>
+<!-- END_ff38dfb1bd1bb7e1aa24b4e1792a9768 -->
+<!-- START_d7aad7b5ac127700500280d511a3db01 -->
+<h2>register</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/register" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/register");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST register</code></p>
+<!-- END_d7aad7b5ac127700500280d511a3db01 -->
+<!-- START_d72797bae6d0b1f3a341ebb1f8900441 -->
+<h2>Display the form to request a password reset link.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/password/reset" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/password/reset");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">null</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET password/reset</code></p>
+<!-- END_d72797bae6d0b1f3a341ebb1f8900441 -->
+<!-- START_feb40f06a93c80d742181b6ffb6b734e -->
+<h2>Send a reset link to the given user.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/password/email" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/password/email");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST password/email</code></p>
+<!-- END_feb40f06a93c80d742181b6ffb6b734e -->
+<!-- START_e1605a6e5ceee9d1aeb7729216635fd7 -->
+<h2>Display the password reset view for the given token.</h2>
+<p>If no token is present, display the link request form.</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/password/reset/{token}" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/password/reset/{token}");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">null</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET password/reset/{token}</code></p>
+<!-- END_e1605a6e5ceee9d1aeb7729216635fd7 -->
+<!-- START_cafb407b7a846b31491f97719bb15aef -->
+<h2>Reset the given user&#039;s password.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/password/reset" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/password/reset");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST password/reset</code></p>
+<!-- END_cafb407b7a846b31491f97719bb15aef -->
+<!-- START_cb859c8e84c35d7133b6a6c8eac253f8 -->
+<h2>home</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/home" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/home");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (401):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Unauthenticated."
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET home</code></p>
+<!-- END_cb859c8e84c35d7133b6a6c8eac253f8 -->
+<!-- START_89966bfb9ab533cc3249b91a9090d3dc -->
+<h2>users</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/users" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/users");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">[
+    {
+        "id": 1,
+        "name": "William",
+        "email": "tpbmit@gmail.com",
+        "email_verified_at": null,
+        "created_at": "2019-01-19 07:32:17",
+        "updated_at": "2019-01-19 07:32:17"
+    }
+]</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET users</code></p>
+<!-- END_89966bfb9ab533cc3249b91a9090d3dc -->
+<!-- START_5693ac2f2e21af3ebc471cd5a6244460 -->
+<h2>users/{user}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/users/{user}" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/users/{user}");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">null</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET users/{user}</code></p>
+<!-- END_5693ac2f2e21af3ebc471cd5a6244460 -->
+<!-- START_995afa55ee54006f4614461df4ee31b4 -->
+<h2>users/{user}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/users/{user}" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/users/{user}");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST users/{user}</code></p>
+<!-- END_995afa55ee54006f4614461df4ee31b4 -->
+<!-- START_2195cccb84db8805141c4c2047fc7c63 -->
+<h2>users/{user}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT "http://localhost/users/{user}" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/users/{user}");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT users/{user}</code></p>
+<!-- END_2195cccb84db8805141c4c2047fc7c63 -->
+<!-- START_a948aef61c80bf96137d023464fde21f -->
+<h2>users/{user}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE "http://localhost/users/{user}" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/users/{user}");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE users/{user}</code></p>
+<!-- END_a948aef61c80bf96137d023464fde21f -->
+<!-- START_a9a49346cf9a2702ada9239063b41859 -->
+<h2>questions</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/questions" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/questions");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">null</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET questions</code></p>
+<!-- END_a9a49346cf9a2702ada9239063b41859 -->
+<!-- START_e86f49be1cd8b8e7d0bd99422f1a6b1f -->
+<h2>questions/{question}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/questions/{question}" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/questions/{question}");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (404):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "No query results for model [App\\Question].",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+    "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Exceptions\/Handler.php",
+    "line": 200,
+    "trace": [
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Exceptions\/Handler.php",
+            "line": 176,
+            "function": "prepareException",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/app\/Exceptions\/Handler.php",
+            "line": 49,
+            "function": "render",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/nunomaduro\/collision\/src\/Adapters\/Laravel\/ExceptionHandler.php",
+            "line": 68,
+            "function": "render",
+            "class": "App\\Exceptions\\Handler",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 83,
+            "function": "render",
+            "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 55,
+            "function": "handleException",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/VerifyCsrfToken.php",
+            "line": 75,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/View\/Middleware\/ShareErrorsFromSession.php",
+            "line": 49,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\View\\Middleware\\ShareErrorsFromSession",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Session\/Middleware\/StartSession.php",
+            "line": 63,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Session\\Middleware\\StartSession",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Cookie\/Middleware\/AddQueuedCookiesToResponse.php",
+            "line": 37,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Cookie\/Middleware\/EncryptCookies.php",
+            "line": 66,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Cookie\\Middleware\\EncryptCookies",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php",
+            "line": 684,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php",
+            "line": 659,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php",
+            "line": 625,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php",
+            "line": 614,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php",
+            "line": 176,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 30,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/fideloper\/proxy\/src\/TrustProxies.php",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Fideloper\\Proxy\\TrustProxies",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php",
+            "line": 31,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php",
+            "line": 31,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/CheckForMaintenanceMode.php",
+            "line": 62,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php",
+            "line": 151,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php",
+            "line": 116,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Tools\/ResponseStrategies\/ResponseCallStrategy.php",
+            "line": 272,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Tools\/ResponseStrategies\/ResponseCallStrategy.php",
+            "line": 256,
+            "function": "callLaravelRoute",
+            "class": "Mpociot\\ApiDoc\\Tools\\ResponseStrategies\\ResponseCallStrategy",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Tools\/ResponseStrategies\/ResponseCallStrategy.php",
+            "line": 33,
+            "function": "makeApiCall",
+            "class": "Mpociot\\ApiDoc\\Tools\\ResponseStrategies\\ResponseCallStrategy",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Tools\/ResponseResolver.php",
+            "line": 49,
+            "function": "__invoke",
+            "class": "Mpociot\\ApiDoc\\Tools\\ResponseStrategies\\ResponseCallStrategy",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Tools\/ResponseResolver.php",
+            "line": 68,
+            "function": "resolve",
+            "class": "Mpociot\\ApiDoc\\Tools\\ResponseResolver",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Tools\/Generator.php",
+            "line": 54,
+            "function": "getResponse",
+            "class": "Mpociot\\ApiDoc\\Tools\\ResponseResolver",
+            "type": "::"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Commands\/GenerateDocumentation.php",
+            "line": 196,
+            "function": "processRoute",
+            "class": "Mpociot\\ApiDoc\\Tools\\Generator",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Commands\/GenerateDocumentation.php",
+            "line": 57,
+            "function": "processRoutes",
+            "class": "Mpociot\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "-&gt;"
+        },
+        {
+            "function": "handle",
+            "class": "Mpociot\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php",
+            "line": 29,
+            "function": "call_user_func_array"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php",
+            "line": 87,
+            "function": "Illuminate\\Container\\{closure}",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php",
+            "line": 31,
+            "function": "callBoundMethod",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Container.php",
+            "line": 572,
+            "function": "call",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php",
+            "line": 183,
+            "function": "call",
+            "class": "Illuminate\\Container\\Container",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/symfony\/console\/Command\/Command.php",
+            "line": 255,
+            "function": "execute",
+            "class": "Illuminate\\Console\\Command",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php",
+            "line": 170,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Command\\Command",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/symfony\/console\/Application.php",
+            "line": 901,
+            "function": "run",
+            "class": "Illuminate\\Console\\Command",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/symfony\/console\/Application.php",
+            "line": 262,
+            "function": "doRunCommand",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/symfony\/console\/Application.php",
+            "line": 145,
+            "function": "doRun",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Application.php",
+            "line": 89,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Console\/Kernel.php",
+            "line": 122,
+            "function": "run",
+            "class": "Illuminate\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/artisan",
+            "line": 37,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Console\\Kernel",
+            "type": "-&gt;"
+        }
+    ]
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET questions/{question}</code></p>
+<!-- END_e86f49be1cd8b8e7d0bd99422f1a6b1f -->
+<!-- START_2a6a8f827d0b5e0f1bf65c4ba0777dce -->
+<h2>questions/{question}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/questions/{question}" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/questions/{question}");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST questions/{question}</code></p>
+<!-- END_2a6a8f827d0b5e0f1bf65c4ba0777dce -->
+<!-- START_8f9948fb084c1579159b0b5823cfbf46 -->
+<h2>questions/{question}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT "http://localhost/questions/{question}" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/questions/{question}");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT questions/{question}</code></p>
+<!-- END_8f9948fb084c1579159b0b5823cfbf46 -->
+<!-- START_dab4c8faaada085f58ae8f2c6200dfe7 -->
+<h2>questions/{question}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE "http://localhost/questions/{question}" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/questions/{question}");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE questions/{question}</code></p>
+<!-- END_dab4c8faaada085f58ae8f2c6200dfe7 -->
+<!-- START_20ff5884698206eb6955b67989e1e1c3 -->
+<h2>Get All Answers</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/answers" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/answers");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "total_score": 4,
+    "label": "Anda memiliki mata yang sehat"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET answers</code></p>
+<!-- END_20ff5884698206eb6955b67989e1e1c3 -->
+<!-- START_d230468944eca91e3013fa14d822a479 -->
+<h2>answers/{answer}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/answers/{answer}" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/answers/{answer}");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (404):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "No query results for model [App\\Answer].",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+    "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Exceptions\/Handler.php",
+    "line": 200,
+    "trace": [
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Exceptions\/Handler.php",
+            "line": 176,
+            "function": "prepareException",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/app\/Exceptions\/Handler.php",
+            "line": 49,
+            "function": "render",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/nunomaduro\/collision\/src\/Adapters\/Laravel\/ExceptionHandler.php",
+            "line": 68,
+            "function": "render",
+            "class": "App\\Exceptions\\Handler",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 83,
+            "function": "render",
+            "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 55,
+            "function": "handleException",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/VerifyCsrfToken.php",
+            "line": 75,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/View\/Middleware\/ShareErrorsFromSession.php",
+            "line": 49,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\View\\Middleware\\ShareErrorsFromSession",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Session\/Middleware\/StartSession.php",
+            "line": 63,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Session\\Middleware\\StartSession",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Cookie\/Middleware\/AddQueuedCookiesToResponse.php",
+            "line": 37,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Cookie\/Middleware\/EncryptCookies.php",
+            "line": 66,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Cookie\\Middleware\\EncryptCookies",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php",
+            "line": 684,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php",
+            "line": 659,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php",
+            "line": 625,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Router.php",
+            "line": 614,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php",
+            "line": 176,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 30,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/fideloper\/proxy\/src\/TrustProxies.php",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Fideloper\\Proxy\\TrustProxies",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php",
+            "line": 31,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/TransformsRequest.php",
+            "line": 31,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Middleware\/CheckForMaintenanceMode.php",
+            "line": 62,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 151,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Routing\/Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Pipeline\/Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php",
+            "line": 151,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Http\/Kernel.php",
+            "line": 116,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Tools\/ResponseStrategies\/ResponseCallStrategy.php",
+            "line": 272,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Tools\/ResponseStrategies\/ResponseCallStrategy.php",
+            "line": 256,
+            "function": "callLaravelRoute",
+            "class": "Mpociot\\ApiDoc\\Tools\\ResponseStrategies\\ResponseCallStrategy",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Tools\/ResponseStrategies\/ResponseCallStrategy.php",
+            "line": 33,
+            "function": "makeApiCall",
+            "class": "Mpociot\\ApiDoc\\Tools\\ResponseStrategies\\ResponseCallStrategy",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Tools\/ResponseResolver.php",
+            "line": 49,
+            "function": "__invoke",
+            "class": "Mpociot\\ApiDoc\\Tools\\ResponseStrategies\\ResponseCallStrategy",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Tools\/ResponseResolver.php",
+            "line": 68,
+            "function": "resolve",
+            "class": "Mpociot\\ApiDoc\\Tools\\ResponseResolver",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Tools\/Generator.php",
+            "line": 54,
+            "function": "getResponse",
+            "class": "Mpociot\\ApiDoc\\Tools\\ResponseResolver",
+            "type": "::"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Commands\/GenerateDocumentation.php",
+            "line": 196,
+            "function": "processRoute",
+            "class": "Mpociot\\ApiDoc\\Tools\\Generator",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/mpociot\/laravel-apidoc-generator\/src\/Commands\/GenerateDocumentation.php",
+            "line": 57,
+            "function": "processRoutes",
+            "class": "Mpociot\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "-&gt;"
+        },
+        {
+            "function": "handle",
+            "class": "Mpociot\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php",
+            "line": 29,
+            "function": "call_user_func_array"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php",
+            "line": 87,
+            "function": "Illuminate\\Container\\{closure}",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/BoundMethod.php",
+            "line": 31,
+            "function": "callBoundMethod",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Container\/Container.php",
+            "line": 572,
+            "function": "call",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php",
+            "line": 183,
+            "function": "call",
+            "class": "Illuminate\\Container\\Container",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/symfony\/console\/Command\/Command.php",
+            "line": 255,
+            "function": "execute",
+            "class": "Illuminate\\Console\\Command",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Command.php",
+            "line": 170,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Command\\Command",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/symfony\/console\/Application.php",
+            "line": 901,
+            "function": "run",
+            "class": "Illuminate\\Console\\Command",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/symfony\/console\/Application.php",
+            "line": 262,
+            "function": "doRunCommand",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/symfony\/console\/Application.php",
+            "line": 145,
+            "function": "doRun",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Console\/Application.php",
+            "line": 89,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/vendor\/laravel\/framework\/src\/Illuminate\/Foundation\/Console\/Kernel.php",
+            "line": 122,
+            "function": "run",
+            "class": "Illuminate\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "\/var\/www\/artisan",
+            "line": 37,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Console\\Kernel",
+            "type": "-&gt;"
+        }
+    ]
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET answers/{answer}</code></p>
+<!-- END_d230468944eca91e3013fa14d822a479 -->
+<!-- START_192468fe063a3b3d4e0b7d85a0ed68f8 -->
+<h2>answers/{answer}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/answers/{answer}" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/answers/{answer}");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST answers/{answer}</code></p>
+<!-- END_192468fe063a3b3d4e0b7d85a0ed68f8 -->
+<!-- START_b2a19a90dc950fa130ecbd8cc7dd72ab -->
+<h2>answers/{answer}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT "http://localhost/answers/{answer}" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/answers/{answer}");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT answers/{answer}</code></p>
+<!-- END_b2a19a90dc950fa130ecbd8cc7dd72ab -->
+<!-- START_c52500a9cf7806bc43645e722af7dcf8 -->
+<h2>answers/{answer}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE "http://localhost/answers/{answer}" </code></pre>
+<pre><code class="language-javascript">const url = new URL("http://localhost/answers/{answer}");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE answers/{answer}</code></p>
+<!-- END_c52500a9cf7806bc43645e722af7dcf8 -->
+      </div>
+      <div class="dark-box">
+                        <div class="lang-selector">
+                                    <a href="#" data-language-name="bash">bash</a>
+                                    <a href="#" data-language-name="javascript">javascript</a>
+                              </div>
+                </div>
+    </div>
+  </body>
+</html>

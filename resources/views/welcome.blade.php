@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Welcome to Cek Mata</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
@@ -62,35 +62,29 @@
                 margin-bottom: 30px;
             }
         </style>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Cek Mata, <i id="typed"></i>
                 </div>
 
+                <script>
+                  var typed = new Typed('#typed', {
+                    strings: ["Sekarang ^2000", "Gratis ^2000"],
+                    smartBackspace: true,
+                    loop: true,
+                    typeSpeed: 100
+                  });
+                </script>
+
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="http://localhost:8100/">Mulai</a>
+                    <a href="/home">Admin</a>
+                    <a href="/docs/index.html">API doc</a>
+                    <a href="https://github.com/noobstyle2pro/kuesioner_kesehatan.git">GitHub</a>
                 </div>
             </div>
         </div>

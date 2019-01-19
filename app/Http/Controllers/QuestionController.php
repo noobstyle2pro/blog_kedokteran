@@ -4,36 +4,32 @@ namespace App\Http\Controllers;
 
 use App\Question;
 use Illuminate\Http\Request;
-use App\Requests\QuestionRequest;
+use App\Http\Requests\QuestionRequest;
 
 class QuestionController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Get All Questions with Answers
      *
-     * @return \Illuminate\Http\Response
+     * @response 200 {
+     *  "total_score": 4,
+     *  "label": "Anda memiliki mata yang sehat"
+     * }
      */
     public function index()
     {
-        return response(Question::latest(), 200);
+        $messages = Question::latest()->get();
+
+        return response($messages, 200);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        $questions = Question::latest()->get();
+
+        return view('questionnaire', compact('questions'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(QuestionRequest $request)
     {
         $question = new Question;
@@ -45,35 +41,16 @@ class QuestionController extends Controller
         return response($question, 201);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\question  $question
-     * @return \Illuminate\Http\Response
-     */
     public function show(question $question)
     {
         return $question;
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\question  $question
-     * @return \Illuminate\Http\Response
-     */
     public function edit(question $question)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\question  $question
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, question $question)
     {
         $question->body = $request->body;
@@ -83,12 +60,6 @@ class QuestionController extends Controller
         return response($question, 200);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\question  $question
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(question $question)
     {
         $question->delete();
